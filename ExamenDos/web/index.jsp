@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<link href="styles.css" rel="stylesheet" type="text/css"/>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="content">
+            <img class="avatar" src="img/arroba.png" alt="logo email">
+            <input name="idCorreo" type="text" placeholder="Login">
+            <input name="idPass" type="password" placeholder="Password">     
+            <input type="submit" name= "btnLogIn" value="Sign in">
+        </div>
     </body>
 </html>
