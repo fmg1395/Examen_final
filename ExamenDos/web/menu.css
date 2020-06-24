@@ -81,28 +81,36 @@ body
     margin: 0;
     padding: 10px 16px;
 }
+#menuEnviar li a{
+    color:white;
+}
+#menuEnviar li{
+    margin-top:10px; 
+        list-style: none;
+}
+#menuEnviar li:hover{
+        background: #287b8b;
 
+}
 #menuEnviar a{
-    text-align: left;
+    text-align: center;
     display: inline-block;
-   width: 100px;
 }
 #nuevo_mensaje{
     
-    text-align: center;
+   text-decoration: none;
     display: block;
     color: white;
     background-color: turquoise;
-    height: 40px;
+    height: 41px;
+    width: 140px;
     line-height: 15px;
     padding: 10px 0;
     border-radius: 5px;
     font-size: 13pt;
     font-weight: normal;
 }
-#menuEnviar a::selection{
-    background-color:skyblue;
-}
+
 #bandeja{
  width:30%;
     height: 100%;
@@ -138,4 +146,3 @@ body
     right:0;
     color:gray;
 }
-

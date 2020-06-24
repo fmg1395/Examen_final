@@ -5,7 +5,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="menu.css" rel="stylesheet" type="text/css"/>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="JavaScript/script.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>JSP Page</title>
         <%
             String usuario = "user50516@demo.afterlogic.com";
@@ -31,18 +32,19 @@
         <div id="content">
 
             <div id="menuEnviar">
-                <li><a id="nuevo_mensaje" href="redactar.jsp">New Message</li></a>
+                <ul>
+                <a id="nuevo_mensaje" href="redactar.jsp">New Message</a>
                 <br>
-                <a onclick="correosRecibidos();">
-                    Inbox</a> <br>
-                <a onclick="correosEnviados();">Sent</a> 
-                <br>
+                <li> <a onclick="correosRecibidos();">
+                        Inbox</a></li><br>
+                <li> <a onclick="correosEnviados();">Sent</a></li> 
+                <br></ul>
             </div>
             <div id="bandeja">
-                <i class="fa fa-trash-o" style="font-size:30px;"></i>
+                <i class="fa fa-trash-o" style="font-size:30px;" onclick="eliminarCorreo();"></i>
             </div>
             <div id="correo">
-                
+
             </div>
         </div>
     </body>

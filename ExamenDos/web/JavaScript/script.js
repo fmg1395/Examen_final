@@ -18,6 +18,7 @@ function obtenerLogin()
     enviarDatos('Servlet_login', data, redireccionar);
     return false;
 }
+
 function enviarDatos(servicio, datos, callback)
 {
     fetch(servicio, {
@@ -59,3 +60,15 @@ function enviarCorreo()
 
     enviarDatos('Servicio_email',formdata,(res)=>{console.log(res);})
 }
+
+
+function eliminarCorreo(){
+    console.log("Se elimina correo");
+}
+function correosRecibidos(){
+    console.log("Se listan correos recibidos");
+}
+function correosEnviados(){
+    console.log("Se listan correos enviados.")
+}
+//function enviarLogIn(datos, callback)
