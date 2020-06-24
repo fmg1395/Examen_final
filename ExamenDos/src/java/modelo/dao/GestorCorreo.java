@@ -41,12 +41,11 @@ public class GestorCorreo implements Serializable {
 
             try (PreparedStatement stm = cnx.prepareStatement(IMEC_Correo.INSERTAR.obtenerComando())) {
                 stm.clearParameters();
-                stm.setInt(1, nuevoCorreo.getId_correo());
-                stm.setString(2, nuevoCorreo.getEmisor());
-                stm.setString(3, nuevoCorreo.getDestinatario());
-                stm.setString(4, nuevoCorreo.getAsunto());
-                stm.setString(5, nuevoCorreo.getMensaje());
-                stm.setBoolean(6, nuevoCorreo.isEstado());
+                stm.setString(1, nuevoCorreo.getEmisor());
+                stm.setString(2, nuevoCorreo.getDestinatario());
+                stm.setString(3, nuevoCorreo.getAsunto());
+                stm.setString(4, nuevoCorreo.getMensaje());
+                stm.setBoolean(5, nuevoCorreo.isEstado());
                 registrosActualizados = stm.executeUpdate();
                 exito = registrosActualizados == 1;
             }

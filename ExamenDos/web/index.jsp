@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 23/06/2020, 10:47:54 AM
-    Author     : frank
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -5,8 +5,10 @@
  */
 package modelo;
 
+import java.io.Serializable;
 
-public class Correo {
+
+public class Correo implements Serializable{
 
     public Correo(int id_correo, String emisor, String destinatario, String asunto, String mensaje, boolean estado) {
         this.id_correo = id_correo;

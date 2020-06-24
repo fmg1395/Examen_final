@@ -1,11 +1,10 @@
-var correo;
-var pass;
-
 
 function obtenerLogin()
 {
-    correo = document.getElementById('idCorreo');
-    pass = document.getElementById('idPass');
+    var correo = document.getElementById('idCorreo');
+    var pass = document.getElementById('idPass');
+
+    document.cookie = 'usuario = ' + correo.value;
 
     var usr = {
         'correo': correo.value,
@@ -32,10 +31,31 @@ function enviarDatos(servicio, datos, callback)
 function redireccionar(res) {
     if (res.respuesta) {
         window.location.href = 'sesion.jsp';
-    }
-    else
+    } else
     {
         correo.value = '';
-        pass.value ='';
+        pass.value = '';
     }
+}
+
+function enviarCorreo()
+{
+    var destinatario = document.getElementById("correo").value;
+    var asunto = document.getElementById("asunto").value;
+    var mensaje = document.getElementById("msg").value;
+    var estado = destinatario.indexOf("@eif209.una.ac.cr") !== -1;
+    var usr = document.cookie.split('=')[1];
+    var email = {
+        'destinatario': destinatario,
+        'asunto': asunto,
+        'mensaje': mensaje,
+        'emisor': usr,
+        'isEstado':estado
+    };
+
+    var formdata = new FormData();
+
+    formdata.append('email', JSON.stringify(email));
+
+    enviarDatos('Servicio_email',formdata,(res)=>{console.log(res);})
 }

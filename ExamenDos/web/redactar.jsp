@@ -10,17 +10,18 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="redactar.css" rel="stylesheet" type="text/css"/>
+        <script src="JavaScript/script.js" type="text/javascript"></script>
         <title>Redactar</title>
     </head>
     <body>
         <header>
         <nav class="menu">
                 <ul>
-                    <li><a href="">Enviar</li></a>
-                    <li><a href="">Save</li></a>
-                    <li><a href="">Importance</li></a>
-                    <li><a href="">Sensitivity</li></a>
-                    <li><a href="">Read confirmation</li></a>
+                    <li><a href='sesion.jsp' onclick='return enviarCorreo();'>Enviar</a></li>
+                    <li><a>Save</a></li>
+                    <li><a href="">Importance</a></li>
+                    <li><a href="">Sensitivity</a></li>
+                    <li><a href="">Read confirmation</a></li>
                 </ul> 
             </nav>
         </header>
