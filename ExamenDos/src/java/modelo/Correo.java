@@ -5,10 +5,7 @@
  */
 package modelo;
 
-/**
- *
- * @author jorih
- */
+
 public class Correo {
 
     public Correo(int id_correo, String emisor, String destinatario, String asunto, String mensaje, boolean estado) {

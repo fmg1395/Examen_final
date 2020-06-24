@@ -5,10 +5,7 @@
  */
 package modelo;
 
-/**
- *
- * @author jorih
- */
+
 public class Usuario {
 
     public Usuario(String correo, String password) {

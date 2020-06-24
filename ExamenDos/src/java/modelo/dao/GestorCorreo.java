@@ -17,10 +17,7 @@ import java.util.List;
 import modelo.Correo;
 import modelo.Usuario;
 
-/**
- *
- * @author jorih
- */
+
 public class GestorCorreo implements Serializable {
      // <editor-fold defaultstate="collapsed" desc="constructores">
     public GestorCorreo() {

@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo.dao;
 
-/**
- *
- * @author jorih
- */
+
 public enum IMEC_Usuario {
     INSERTAR("INSERT INTO usuario (`correo`, `password`) VALUES (?, ?); "),
     MODIFICAR("UPDATE usuario SET `password`=? WHERE `correo`=?; "),

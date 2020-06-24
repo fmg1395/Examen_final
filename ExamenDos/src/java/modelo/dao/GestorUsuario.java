@@ -16,10 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import modelo.Usuario;
 
-/**
- *
- * @author jorih
- */
+
 public class GestorUsuario implements Serializable {
      // <editor-fold defaultstate="collapsed" desc="constructores">
     public GestorUsuario() {

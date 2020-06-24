@@ -1,9 +1,4 @@
-<%-- 
-    Document   : sesion
-    Created on : 23 jun. 2020, 12:51:53
-    Author     : Kike
---%>
-<%--<%@page import="modelo.Usuario"%>--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

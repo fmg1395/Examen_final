@@ -1,25 +1,41 @@
+var correo;
+var pass;
+
+
 function obtenerLogin()
 {
-    var correo = document.getElementById('idCorreo').value;
-    console.log(correo);
-    var pass = document.getElementById('idPass').value;
+    correo = document.getElementById('idCorreo');
+    pass = document.getElementById('idPass');
 
     var usr = {
-        'correo': correo,
-        'password': pass
+        'correo': correo.value,
+        'password': pass.value
     };
 
-    enviarLogIn(usr, (redireccionar));
+    var data = new FormData();
+    data.append("usr", JSON.stringify(usr));
+
+
+    enviarDatos('Servlet_login', data, redireccionar);
+    return false;
 }
-function enviarLogIn(datos, callback)
+function enviarDatos(servicio, datos, callback)
 {
-    fetch('Servlet_login?datos=' + JSON.stringify(datos)).then(function (resultado) {
-        return resultado.json();
+    fetch(servicio, {
+        method: 'POST',
+        body: datos
+    }).then((result) => {
+        return result.json();
     }).then(callback);
 }
 
-function redireccionar(jsp) {
-    if (jsp.respuesta) {
+function redireccionar(res) {
+    if (res.respuesta) {
         window.location.href = 'sesion.jsp';
+    }
+    else
+    {
+        correo.value = '';
+        pass.value ='';
     }
 }

@@ -67,5 +67,3 @@ INSERT INTO `eif209_2001_exp2`.`correo`
 		('georges.alfaro@eif209.una.ac.cr', 'carlos.mora@alla.lejos.com', 'solicitud', 'Favor enviar el documento.', 0)
 	;
     
-select * from usuario;
-select * from correo;
