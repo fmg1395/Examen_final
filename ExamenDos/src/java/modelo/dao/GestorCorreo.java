@@ -15,7 +15,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.Correo;
-import modelo.Usuario;
 
 
 public class GestorCorreo implements Serializable {
