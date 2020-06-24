@@ -51,7 +51,7 @@ function enviarCorreo()
         'asunto': asunto,
         'mensaje': mensaje,
         'emisor': usr,
-        'isEstado':estado
+        'estado':estado
     };
 
     var formdata = new FormData();

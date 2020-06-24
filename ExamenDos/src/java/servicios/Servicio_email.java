@@ -30,6 +30,7 @@ public class Servicio_email extends HttpServlet {
             String n = p.nextElement();
             Correo mail = new Gson().fromJson(request.getParameter(n), Correo.class);
             
+            
             boolean verificacion = new GestorCorreo().registrarCorreo(mail);
             
             r.addProperty("respuesta", verificacion);

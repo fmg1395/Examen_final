@@ -25,7 +25,7 @@ public class Correo implements Serializable{
     
     @Override
     public String toString() {
-        return "Correo{" + "id_correo=" + id_correo + ", emisor=" + emisor + ", destinatario=" + destinatario + ", asunto=" + asunto + ", mensaje=" + mensaje + ", estado=" + estado + '}';
+        return "Correo{" + "id_correo=" + id_correo + ", emisor=" + emisor + ", destinatario=" + destinatario + ", asunto=" + asunto + ", mensaje=" + mensaje + ", estado=" + isEstado() + '}';
     }
 
     public int getId_correo() {
