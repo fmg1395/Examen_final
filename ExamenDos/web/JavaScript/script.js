@@ -13,6 +13,12 @@ function obtenerLogin()
 function eliminarCorreo(){
     console.log("Se elimina correo");
 }
+function correosRecibidos(){
+    console.log("Se listan correos recibidos");
+}
+function correosEnviados(){
+    console.log("Se listan correos enviados.")
+}
 function enviarLogIn(datos, callback)
 {
     var form_data = new FormData();

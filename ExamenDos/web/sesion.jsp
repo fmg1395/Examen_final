@@ -41,7 +41,7 @@
                 <a id="nuevo_mensaje" href="redactar.jsp">New Message</a>
                 <br>
                 <li> <a onclick="correosRecibidos();">
-                        Inbox</a></li> <br>
+                        Inbox</a></li><br>
                 <li> <a onclick="correosEnviados();">Sent</a></li> 
                 <br></ul>
             </div>
