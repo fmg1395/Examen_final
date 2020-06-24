@@ -10,6 +10,9 @@ function obtenerLogin()
     };
     enviarLogIn(usr);
 }
+function eliminarCorreo(){
+    console.log("Se elimina correo");
+}
 function enviarLogIn(datos, callback)
 {
     var form_data = new FormData();
