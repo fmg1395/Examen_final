@@ -51,24 +51,54 @@ function enviarCorreo()
         'asunto': asunto,
         'mensaje': mensaje,
         'emisor': usr,
-        'estado':estado
+        'estado': estado
     };
 
     var formdata = new FormData();
 
     formdata.append('email', JSON.stringify(email));
 
-    enviarDatos('Servicio_email',formdata,(res)=>{console.log(res);})
+    enviarDatos('Servicio_email', formdata, (res) => {
+        console.log(res);
+    })
 }
 
 
-function eliminarCorreo(){
+function eliminarCorreo() {
     console.log("Se elimina correo");
 }
-function correosRecibidos(){
+function correosRecibidos() {
     console.log("Se listan correos recibidos");
 }
-function correosEnviados(){
+function correosEnviados() {
     console.log("Se listan correos enviados.")
 }
-//function enviarLogIn(datos, callback)
+
+function logout()
+{
+    document.cookie = 'usuario = " " ';
+    window.location.href = 'index.jsp';
+}
+
+function recuperarUsuarios()
+{
+    fetch('Servlet_usuarios?usuarios=true').then(function (resultado) {
+        console.log(typeof resultado);
+        return resultado.json();
+    }).then(generaTabla);
+}
+
+function generaTabla(datos)
+{
+    console.log('Inicio de tabla');
+    var array = datos.correos;
+    console.log(typeof array);
+    array.forEach(ArmarTabla);
+}
+function ArmarTabla(item, index) {
+    var tabla = document.getElementById("tabla_contactos");
+    var nuevaFila = tabla.insertRow(-1);
+    var nuevaCelda;
+    nuevaCelda = nuevaFila.insertCell(-1);
+    nuevaCelda.textContent = item;
+}

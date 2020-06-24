@@ -25,7 +25,7 @@
                     <li><a href="#">Files</a></li>
                     <li><a href="#">Tasks</a></li>
                     <li class="settings"><a href="#">Settings</a></li>
-                    <li><input id="logout" type="submit" name= "btnLogOut" value="Logout"></li>
+                    <li><input id="logout" onClick='return logout();' type="submit" name= "btnLogOut" value="Logout"></li>
                 </ul>   
             </nav>
         </header>

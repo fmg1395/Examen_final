@@ -15,7 +15,7 @@
     </head>
     <body>
         <header>
-        <nav class="menu">
+            <nav class="menu">
                 <ul>
                     <li><a href='sesion.jsp' onclick='return enviarCorreo();'>Enviar</a></li>
                     <li><a>Save</a></li>
@@ -30,7 +30,7 @@
             <ul>
                 <li>
                     <label for="correo">Para:</label>
-                    <input type="text" id="correo" name="correo">
+                    <input onClick='return recuperarUsuarios();' type="text" id="correo" name="correo">
                 </li>
                 <hr>
                 <li>
@@ -44,7 +44,14 @@
                 </li>
             </ul>
         </form>
-        <li><a href="sesion.jsp">Cancelar</li></a>
-    </body>
+    <li><a href="sesion.jsp">Cancelar</li></a>
+    <div> 
+        <table>
+            <tbody id='tabla_contactos'>
+                
+            </tbody>
+        </table>
+    </div>
+</body>
 </html>
 
