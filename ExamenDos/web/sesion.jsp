@@ -12,7 +12,7 @@
         <link href="menu.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
         <%
-            String usuario="eif209.una.ac.cr";
+            String usuario="user50516@demo.afterlogic.com";
         //new Usuario().getCorreo();
         %>
     </head>
@@ -23,17 +23,20 @@
                   <%
                    out.println("<a class='Encabezado'>"+usuario+"</a>");
                    %>
-                   <li><a href="#"></a>Contacts</li>
-                   <li><a href="#"></a>Calendar</li>
-                   <li><a href="#"></a>Files</li>
-                   <li><a href="#"></a>Tasks</li>
-                   <li><a href="#"></a>Settings</li>
-                   <li><input id="logout" type="submit" value="Logout"></li>
+                   <li><a href="#">Contacts</a></li>
+                   <li><a href="#">Calendar</a></li>
+                   <li><a href="#">Files</a></li>
+                   <li><a href="#">Tasks</a></li>
+                   <li class="settings"><a href="#">Settings</a></li>
+                   <li><input id="logout" type="submit" name= "btnLogOut" value="Logout"></li>
                 </ul>   
             </nav>
         </header>
-        <h1>
+        <div id="content">
             
-        </h1>
+            </div><div id="botonEnviar">
+                <input id="nuevo_mensaje" class="botonMensaje" value="New message">
+                </input>       
+        </div>
     </body>
 </html>
