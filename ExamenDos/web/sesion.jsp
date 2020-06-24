@@ -31,7 +31,7 @@
         <div id="content">
 
             <div id="menuEnviar">
-                <input id="nuevo_mensaje" class="botonMensaje" value="New message">
+                <li><a id="nuevo_mensaje" href="redactar.jsp">New Message</li></a>
                 <br>
                 <a onclick="correosRecibidos();">
                     Inbox</a> <br>
