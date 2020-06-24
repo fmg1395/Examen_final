@@ -98,12 +98,12 @@ body
 #nuevo_mensaje{
     
     text-align: center;
-   display: block;
+    display: block;
     color: white;
     background-color: turquoise;
-    height: 60px;
-    line-height: 10px;
-    padding: 5px 0;
+    height: 40px;
+    line-height: 15px;
+    padding: 10px 0;
     border-radius: 5px;
     font-size: 13pt;
     font-weight: normal;
@@ -146,3 +146,4 @@ body
     right:0;
     color:gray;
 }
+
