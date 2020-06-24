@@ -2,6 +2,7 @@ package servicios;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.Usuario;
+import modelo.dao.GestorUsuario;
 
 
 /**
@@ -31,10 +33,10 @@ public class Servlet_login extends HttpServlet {
             Enumeration<String> p = request.getParameterNames();
             String n = p.nextElement();
             Usuario usr = new Gson().fromJson(request.getParameter(n), Usuario.class);
-
-            r.addProperty("result", "ok");
+            //boolean verificacion = new GestorUsuario().verificarUsuario(usr.getCorreo(),usr.getPassword());
+            
+            r.addProperty("respuesta",true);
             out.println(r);
-
         }
     }
 

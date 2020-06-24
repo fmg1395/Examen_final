@@ -8,21 +8,18 @@ function obtenerLogin()
         'correo': correo,
         'password': pass
     };
-    enviarLogIn(usr);
+
+    enviarLogIn(usr, (redireccionar));
 }
 function enviarLogIn(datos, callback)
 {
-    var form_data = new FormData();
-    form_data.append('usuario',JSON.stringify(datos));
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-   
-    xobj.open('POST', 'Servlet_login?usuario='+JSON.stringify(datos), true);
-    xobj.send();
-    
-    xobj.onreadystatechange = function () {
-        if (xobj.readyState === 4 && xobj.status === 200) {
-            console.log(JSON.parse(xobj.responseText));
-        }
+    fetch('Servlet_login?datos=' + JSON.stringify(datos)).then(function (resultado) {
+        return resultado.json();
+    }).then(callback);
+}
+
+function redireccionar(jsp) {
+    if (jsp.respuesta) {
+        window.location.href = 'sesion.jsp';
     }
 }
